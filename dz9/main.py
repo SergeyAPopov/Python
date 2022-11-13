@@ -39,6 +39,7 @@ def bot_turn(message):
     else:
         game = False
         bot.send_message(message.chat.id, "Бот выиграл!")
+        candies = 221
 
 @bot.message_handler(func = lambda _: game)
 def player_turn(message):
@@ -57,7 +58,8 @@ def player_turn(message):
                 candies = 0
                 game = False
                 bot.send_message(message.chat.id, "Вы победили")
-                candies = 228
+                candies = 221
+                
     except:
         bot.send_message(message.chat.id, "Введено не число.")
 
