@@ -1,0 +1,25 @@
+# f(x) = 18x^3+5x^2 + 10x - 30
+import sympy
+
+# Определить корни
+x = sympy.Symbol('x')
+test1 = 18*x**3 + 5*x**2 + 10*x - 30
+print(sympy.solve(test1,x))
+
+#  Найти интервалы, на которых функция возрастает
+# Найти интервалы, на которых функция убывает
+print(sympy.solve(test1,x))
+print(sympy.solve(test1,x))
+
+# # Построить график
+sympy.plotting.plot(test1)
+
+# # Вычислить вершину
+diff =  sympy.diff(test1,x)
+print(diff)
+print(sympy.solve(diff,x))
+
+# # Определить промежутки, на котором f > 0
+# # Определить промежутки, на котором f < 0
+print(sympy.solve(diff > 0,x))
+print(sympy.solve(diff < 0,x))
